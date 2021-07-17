@@ -27,7 +27,8 @@ namespace ClopyHotel.Infra.Data
         {
             var rooms = _roomRepository.Queryable()
                                 .Where(x => x.RoomId > 0)
-                                .Include(x => x.RoomType)
+                                .Include(x => x.RoomType.RoomTypeName)
+                                .AsNoTracking()
                                 .AsEnumerable();
             return rooms;
         }
