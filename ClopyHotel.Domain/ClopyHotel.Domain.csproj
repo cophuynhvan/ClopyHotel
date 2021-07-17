@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClopyHotel.Domain.Core\ClopyHotel.Domain.Core.csproj" />
+  </ItemGroup>
+
 </Project>

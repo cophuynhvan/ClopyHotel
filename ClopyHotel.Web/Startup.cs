@@ -1,14 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ClopyHotel.Infra.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using MediatR;
+using ClopyHotel.Infra.IoC;
 
 namespace ClopyHotel.Web
 {
@@ -33,7 +32,14 @@ namespace ClopyHotel.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            
+            services.AddDbContext<ClopyHotelEntities>(options =>
+            {
+                options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("ClopyHotelEntities"));
+            });
+
+            services.AddMediatR(typeof(Startup));
+
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +68,10 @@ namespace ClopyHotel.Web
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace ClopyHotel.Infra.Data.Repository
+namespace ClopyHotel.Infra.Data
 {
     public class RoomRepository : IRoomRepository 
     {
@@ -18,9 +18,9 @@ namespace ClopyHotel.Infra.Data.Repository
             _uow = uow;
             _roomRepository = roomRepository;
         }
-        public async Task<Room> GetRoom(int RoomId)
+        public async Task<Room> GetRoom(int roomId)
         {
-            var room = await _roomRepository.FindAsync(RoomId);
+            var room = await _roomRepository.FindAsync(roomId);
             return room;
         }
         public IEnumerable<Room> GetRooms()
