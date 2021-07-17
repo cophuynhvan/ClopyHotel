@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClopyHotel.Api", "ClopyHote
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClopyHotel.Web", "ClopyHotel.Web\ClopyHotel.Web.csproj", "{5A5FF068-B4AD-4532-A1CC-6B614E2C3490}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClopyHotel.Infra.Bus", "ClopyHotel.Infra.Bus\ClopyHotel.Infra.Bus.csproj", "{3C4C58B9-052D-4C1B-B6C9-00911DDD7BEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{5A5FF068-B4AD-4532-A1CC-6B614E2C3490}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A5FF068-B4AD-4532-A1CC-6B614E2C3490}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A5FF068-B4AD-4532-A1CC-6B614E2C3490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C4C58B9-052D-4C1B-B6C9-00911DDD7BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4C58B9-052D-4C1B-B6C9-00911DDD7BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4C58B9-052D-4C1B-B6C9-00911DDD7BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4C58B9-052D-4C1B-B6C9-00911DDD7BEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{C37670CE-80D8-437B-9587-DBE8DB96F79C} = {25E6762D-5A14-4D5D-9B59-74A22BB74E57}
 		{2CC9AF0D-6DCD-4C90-895B-52332B8A9E13} = {1504A32F-DCFF-454D-B80A-F253BB9297B7}
 		{5A5FF068-B4AD-4532-A1CC-6B614E2C3490} = {5E65941D-3BD4-4F89-BA54-838160B9D753}
+		{3C4C58B9-052D-4C1B-B6C9-00911DDD7BEA} = {E992CDB3-6061-4509-ACB5-741F1A413A4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E70AA97C-E717-4601-99FF-4EF458F86A32}
