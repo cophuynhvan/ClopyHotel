@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{5E65941D-3BD4-4F89-BA54-838160B9D753}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{1504A32F-DCFF-454D-B80A-F253BB9297B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{25E6762D-5A14-4D5D-9B59-74A22BB74E57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{95E94028-82BC-41C1-B641-317B11703972}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{E992CDB3-6061-4509-ACB5-741F1A413A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClopyHotel.Infra.Data", "ClopyHotel.Infra.Data\ClopyHotel.Infra.Data.csproj", "{C48D5328-85A7-49D0-A877-5649897B23D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClopyHotel.Infra.IoC", "ClopyHotel.Infra.IoC\ClopyHotel.Infra.IoC.csproj", "{001EF265-62E0-4A11-8606-2C74D4970373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClopyHotel.Infra.Bus", "ClopyHotel.Infra.Bus\ClopyHotel.Infra.Bus.csproj", "{270574CC-5B6F-4085-9027-8B10B03FCE90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClopyHotel.Domain", "ClopyHotel.Domain\ClopyHotel.Domain.csproj", "{D46305CB-3B44-4599-B052-16BC647205BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClopyHotel.Domain.Core", "ClopyHotel.Domain.Core\ClopyHotel.Domain.Core.csproj", "{FBDF8E2B-0458-4898-BFBD-8733B9D22642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClopyHotel.Application", "ClopyHotel.Application\ClopyHotel.Application.csproj", "{C37670CE-80D8-437B-9587-DBE8DB96F79C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClopyHotel.Api", "ClopyHotel.Api\ClopyHotel.Api.csproj", "{2CC9AF0D-6DCD-4C90-895B-52332B8A9E13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClopyHotel.Web", "ClopyHotel.Web\ClopyHotel.Web.csproj", "{5A5FF068-B4AD-4532-A1CC-6B614E2C3490}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C48D5328-85A7-49D0-A877-5649897B23D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C48D5328-85A7-49D0-A877-5649897B23D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C48D5328-85A7-49D0-A877-5649897B23D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C48D5328-85A7-49D0-A877-5649897B23D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001EF265-62E0-4A11-8606-2C74D4970373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001EF265-62E0-4A11-8606-2C74D4970373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001EF265-62E0-4A11-8606-2C74D4970373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001EF265-62E0-4A11-8606-2C74D4970373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{270574CC-5B6F-4085-9027-8B10B03FCE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{270574CC-5B6F-4085-9027-8B10B03FCE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{270574CC-5B6F-4085-9027-8B10B03FCE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{270574CC-5B6F-4085-9027-8B10B03FCE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46305CB-3B44-4599-B052-16BC647205BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46305CB-3B44-4599-B052-16BC647205BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46305CB-3B44-4599-B052-16BC647205BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46305CB-3B44-4599-B052-16BC647205BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBDF8E2B-0458-4898-BFBD-8733B9D22642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBDF8E2B-0458-4898-BFBD-8733B9D22642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBDF8E2B-0458-4898-BFBD-8733B9D22642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBDF8E2B-0458-4898-BFBD-8733B9D22642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37670CE-80D8-437B-9587-DBE8DB96F79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37670CE-80D8-437B-9587-DBE8DB96F79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37670CE-80D8-437B-9587-DBE8DB96F79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37670CE-80D8-437B-9587-DBE8DB96F79C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC9AF0D-6DCD-4C90-895B-52332B8A9E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC9AF0D-6DCD-4C90-895B-52332B8A9E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC9AF0D-6DCD-4C90-895B-52332B8A9E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC9AF0D-6DCD-4C90-895B-52332B8A9E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A5FF068-B4AD-4532-A1CC-6B614E2C3490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A5FF068-B4AD-4532-A1CC-6B614E2C3490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A5FF068-B4AD-4532-A1CC-6B614E2C3490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A5FF068-B4AD-4532-A1CC-6B614E2C3490}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C48D5328-85A7-49D0-A877-5649897B23D0} = {E992CDB3-6061-4509-ACB5-741F1A413A4E}
+		{001EF265-62E0-4A11-8606-2C74D4970373} = {E992CDB3-6061-4509-ACB5-741F1A413A4E}
+		{270574CC-5B6F-4085-9027-8B10B03FCE90} = {E992CDB3-6061-4509-ACB5-741F1A413A4E}
+		{D46305CB-3B44-4599-B052-16BC647205BA} = {95E94028-82BC-41C1-B641-317B11703972}
+		{FBDF8E2B-0458-4898-BFBD-8733B9D22642} = {95E94028-82BC-41C1-B641-317B11703972}
+		{C37670CE-80D8-437B-9587-DBE8DB96F79C} = {25E6762D-5A14-4D5D-9B59-74A22BB74E57}
+		{2CC9AF0D-6DCD-4C90-895B-52332B8A9E13} = {1504A32F-DCFF-454D-B80A-F253BB9297B7}
+		{5A5FF068-B4AD-4532-A1CC-6B614E2C3490} = {5E65941D-3BD4-4F89-BA54-838160B9D753}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E70AA97C-E717-4601-99FF-4EF458F86A32}
+	EndGlobalSection
+EndGlobal
