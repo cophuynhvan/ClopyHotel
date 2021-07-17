@@ -4,7 +4,9 @@ using ClopyHotel.Domain.Commands;
 using ClopyHotel.Domain.Core;
 using ClopyHotel.Domain.Interfaces;
 using ClopyHotel.Domain.Models;
+using MediatR;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ClopyHotel.Application.Services
 {
@@ -12,20 +14,25 @@ namespace ClopyHotel.Application.Services
     {
         private readonly IRoomRepository _roomRepository;
         private readonly IMediatorHandler _bus;
+        private readonly IMediator _mediator;
 
-        public RoomService(IMediatorHandler bus, IRoomRepository roomRepository)
+        public RoomService(IMediatorHandler bus, IMediator mediator, IRoomRepository roomRepository)
         {
             _bus = bus;
+            _mediator = mediator;
             _roomRepository = roomRepository;
         }
 
-        public void Create(RoomViewModel room)
+        public async Task<Room> Create(RoomViewModel room)
         {
             var createRoomCommand = new CreateRoomCommand(
                 room.RoomName, 
                 room.RoomTypeId, 
                 room.Description);
-            var response = _bus.SendCommand(createRoomCommand);
+            // var response = _bus.SendCommand(createRoomCommand);
+            var response = await _mediator.Send(createRoomCommand);
+
+            return response;
         }
 
         public IEnumerable<Room> GetRooms()

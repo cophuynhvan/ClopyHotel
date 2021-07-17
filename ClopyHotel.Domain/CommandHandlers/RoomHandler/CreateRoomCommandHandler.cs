@@ -14,7 +14,7 @@ namespace ClopyHotel.Domain.CommandHandlers
         {
             _roomRepository = roomRepository;
         }
-        public Task<Room> Handle(CreateRoomCommand request, CancellationToken cancellationToken)
+        public async Task<Room> Handle(CreateRoomCommand request, CancellationToken cancellationToken)
         {
             var room = new Room()
             {
@@ -22,8 +22,8 @@ namespace ClopyHotel.Domain.CommandHandlers
                 RoomTypeId = request.RoomTypeId,
                 Description = request.Description
             };
-            var obj = _roomRepository.Add(room);
-            return obj;
+            await _roomRepository.Add(room);
+            return room;
         }
     }
 }

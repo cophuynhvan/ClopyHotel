@@ -21,6 +21,7 @@ namespace ClopyHotel.Infra.IoC
         {
           
             // Domain layer 
+            // services.AddScoped<IRequestHandler<CreateRoomCommand, bool>, CreateRoomCommandHandler>();
             services.AddScoped<IRequestHandler<CreateRoomCommand, Room>, CreateRoomCommandHandler>();
             services.AddScoped<IRequestHandler<CreateRoomTypeCommand, RoomType>, CreateRoomTypeCommandHandler>();
             services.AddScoped<IMediatorHandler, InMemoryBus>();

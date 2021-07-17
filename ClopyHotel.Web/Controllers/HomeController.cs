@@ -34,15 +34,20 @@ namespace ClopyHotel.Web.Controllers
 
         public IActionResult Privacy()
         {
-
-            _roomService.Create(
-                new RoomViewModel() { 
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Create()
+        {
+          var newRoom = await  _roomService.Create(
+                new RoomViewModel()
+                {
                     RoomName = "Deluxe 2.002",
                     RoomTypeId = 4,
                     Description = "Deluxe double suitable for family or group people more than 2"
                 }
                 );
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
