@@ -19,6 +19,7 @@ namespace ClopyHotel.Infra.Data
                 // EF Core 3.* must use Proxies and SqlServer extension
                 optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Server=localhost;Database=ClopyHotel;Trusted_Connection=True;MultipleActiveResultSets=true;App=ClopyHotel;");
 
+
                 // EF Core 5.0 or above can use UseSqlServer
                 // optionsBuilder.UseSqlServer("Server=localhost;Database=ClopyHotel;Trusted_Connection=True;MultipleActiveResultSets=true;App = ClopyHotel;");
             }

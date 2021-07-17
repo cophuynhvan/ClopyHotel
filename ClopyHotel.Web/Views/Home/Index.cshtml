@@ -1,8 +1,30 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@model ListRoomViewModel
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <table>
+        @foreach (var room in Model.Rooms)
+        {
+
+            <tr>
+                <td>
+                    @room.RoomId
+                </td>
+                <td>
+                    @room.RoomName
+                </td>
+                <td>
+                    @room.RoomType.RoomTypeName
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    @room.Description
+                </td>
+            </tr>
+        }
+    </table>
+    </div>

@@ -9,9 +9,13 @@ namespace ClopyHotel.Infra.Data
         public void Configure(EntityTypeBuilder<Room> entity)
         {
             entity.HasKey(e => e.RoomId);
+
             entity.ToTable("Room", "Hotel");
+            entity.Property(e => e.RoomName)
+                .IsUnicode(true)
+                .HasMaxLength(1000);
             entity.HasOne(e => e.RoomType)
-                .WithMany()
+                .WithMany(e => e.Room)
                 .HasForeignKey(e => e.RoomTypeId);
         }
     }
