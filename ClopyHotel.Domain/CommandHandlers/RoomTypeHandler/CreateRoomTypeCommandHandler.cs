@@ -1,9 +1,9 @@
-﻿using MediatR;
-using ClopyHotel.Domain.Commands;
-using System.Threading.Tasks;
-using System.Threading;
+﻿using ClopyHotel.Domain.Commands;
 using ClopyHotel.Domain.Interfaces;
 using ClopyHotel.Domain.Models;
+using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ClopyHotel.Domain.CommandHandlers
 {

@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ClopyHotel.Domain.Models;
+﻿using ClopyHotel.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClopyHotel.Infra.Data
 {
-    public class ClopyHotelEntities : DbContext 
+    public class ClopyHotelEntities : DbContext
     {
         public ClopyHotelEntities(DbContextOptions options) : base(options)
-        { 
+        {
         }
 
         public virtual DbSet<Room> Rooms { get; set; }

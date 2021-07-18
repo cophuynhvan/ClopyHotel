@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
-using ClopyHotel.Domain.Interfaces;
+﻿using ClopyHotel.Domain.Interfaces;
 using ClopyHotel.Domain.Models;
-using URF.Core.Abstractions;
-using System.Threading.Tasks;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using URF.Core.Abstractions;
 
 namespace ClopyHotel.Infra.Data
 {
-    public class RoomRepository : IRoomRepository 
+    public class RoomRepository : IRoomRepository
     {
         private readonly IUnitOfWork _uow;
         private readonly IRepository<Room> _roomRepository;
-        
+
         public RoomRepository(IUnitOfWork uow, IRepository<Room> roomRepository)
         {
             _uow = uow;

@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using ClopyHotel.Domain.Interfaces;
+﻿using ClopyHotel.Domain.Interfaces;
 using ClopyHotel.Domain.Models;
-using URF.Core.Abstractions;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using URF.Core.Abstractions;
 
 namespace ClopyHotel.Infra.Data
 {

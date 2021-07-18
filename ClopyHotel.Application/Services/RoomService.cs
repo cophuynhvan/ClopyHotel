@@ -26,8 +26,8 @@ namespace ClopyHotel.Application.Services
         public async Task<Room> Create(RoomViewModel room)
         {
             var createRoomCommand = new CreateRoomCommand(
-                room.RoomName, 
-                room.RoomTypeId, 
+                room.RoomName,
+                room.RoomTypeId,
                 room.Description);
             // var response = _bus.SendCommand(createRoomCommand);
             var response = await _mediator.Send(createRoomCommand);

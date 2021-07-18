@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ClopyHotel.Application.Interfaces;
+using ClopyHotel.Application.ViewModel;
+using ClopyHotel.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ClopyHotel.Web.Models;
-using ClopyHotel.Application.Interfaces;
-using ClopyHotel.Application.ViewModel;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace ClopyHotel.Web.Controllers
 {
@@ -39,14 +36,14 @@ namespace ClopyHotel.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create()
         {
-          var newRoom = await  _roomService.Create(
-                new RoomViewModel()
-                {
-                    RoomName = "Deluxe 2.002",
-                    RoomTypeId = 4,
-                    Description = "Deluxe double suitable for family or group people more than 2"
-                }
-                );
+            var newRoom = await _roomService.Create(
+                  new RoomViewModel()
+                  {
+                      RoomName = "Deluxe 2.002",
+                      RoomTypeId = 4,
+                      Description = "Deluxe double suitable for family or group people more than 2"
+                  }
+                  );
             return RedirectToAction("Index", "Home");
         }
 

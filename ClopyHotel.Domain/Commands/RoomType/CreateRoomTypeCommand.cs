@@ -1,5 +1,5 @@
-﻿using MediatR;
-using ClopyHotel.Domain.Models;
+﻿using ClopyHotel.Domain.Models;
+using MediatR;
 
 namespace ClopyHotel.Domain.Commands
 {

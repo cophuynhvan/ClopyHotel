@@ -1,5 +1,3 @@
-using System;
-
 namespace ClopyHotel.Web.Models
 {
     public class ErrorViewModel

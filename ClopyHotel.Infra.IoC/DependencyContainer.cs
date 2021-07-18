@@ -1,17 +1,17 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using ClopyHotel.Application.Interfaces;
+﻿using ClopyHotel.Application.Interfaces;
 using ClopyHotel.Application.Services;
 using ClopyHotel.Domain.CommandHandlers;
-using MediatR;
 using ClopyHotel.Domain.Commands;
-using ClopyHotel.Domain.Models;
 using ClopyHotel.Domain.Core;
 using ClopyHotel.Domain.Interfaces;
+using ClopyHotel.Domain.Models;
 using ClopyHotel.Infra.Bus;
 using ClopyHotel.Infra.Data;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using URF.Core.Abstractions;
 using URF.Core.EF;
-using Microsoft.EntityFrameworkCore;
 
 namespace ClopyHotel.Infra.IoC
 {
@@ -19,7 +19,7 @@ namespace ClopyHotel.Infra.IoC
     {
         public static void RegisterServices(IServiceCollection services)
         {
-          
+
             // Domain layer 
             // services.AddScoped<IRequestHandler<CreateRoomCommand, bool>, CreateRoomCommandHandler>();
             services.AddScoped<IRequestHandler<CreateRoomCommand, Room>, CreateRoomCommandHandler>();

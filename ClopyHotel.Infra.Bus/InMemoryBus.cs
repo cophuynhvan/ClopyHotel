@@ -1,13 +1,13 @@
-﻿using MediatR;
+﻿using ClopyHotel.Domain.Core;
+using MediatR;
 using System.Threading.Tasks;
-using ClopyHotel.Domain.Core;
 
 namespace ClopyHotel.Infra.Bus
 {
     public class InMemoryBus : IMediatorHandler
     {
         private readonly IMediator _mediator;
-        public InMemoryBus(IMediator mediator) 
+        public InMemoryBus(IMediator mediator)
         {
             _mediator = mediator;
         }
