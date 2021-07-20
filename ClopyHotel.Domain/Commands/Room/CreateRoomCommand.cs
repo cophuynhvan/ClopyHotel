@@ -2,7 +2,7 @@
 using MediatR;
 namespace ClopyHotel.Domain.Commands
 {
-    public class CreateRoomCommand : IRequest<Room>
+    public class CreateRoomCommand : RoomCommand, IRequest<Room>
     {
         public CreateRoomCommand(string name, int roomTypeId, string description)
         {
@@ -10,9 +10,5 @@ namespace ClopyHotel.Domain.Commands
             RoomTypeId = roomTypeId;
             Description = description;
         }
-
-        public string RoomName { get; private set; }
-        public int RoomTypeId { get; private set; }
-        public string Description { get; private set; }
     }
 }
