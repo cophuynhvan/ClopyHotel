@@ -156,6 +156,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataFactory\InitiateData.cs" />
     <Compile Include="DataFactory\InMemoryFactory.cs" />
     <Compile Include="RoomRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

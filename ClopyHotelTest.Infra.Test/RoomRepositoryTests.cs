@@ -14,13 +14,21 @@ namespace ClopyHotelTest.Infra.Test
     {
         private readonly ClopyHotelInMemoryEntities _context;
         private readonly IUnitOfWork _uow;
-        private readonly IRepository<Room> _iRoomRepository;
+        private readonly IRepository<Room> _iRepository;
+        private readonly IRoomRepository _iRoomRepository;
         
         public RoomRepositoryTests()
         {
+            // Set up inmemory context and initate sample data
             _context = InMemoryFactory.CreateInMemoryDbContext();
+            InitiateData.InitiateDataContext(_context);
+            
+            // unit of work and repository
             _uow = new UnitOfWork(_context);
-            _iRoomRepository = new Repository<Room>(_context);
+            _iRepository = new Repository<Room>(_context);
+
+            // room repository
+            _iRoomRepository = new RoomRepository(_uow, _iRepository);
         }
 
         [Fact]
@@ -30,24 +38,48 @@ namespace ClopyHotelTest.Infra.Test
             var room = new Room() { RoomName = "01", RoomTypeId = 1, Description = "" };
 
             // Action
-            IRoomRepository roomRepository = new RoomRepository(_uow, _iRoomRepository);
-            var result = await roomRepository.Add(room);
+            var result = await _iRoomRepository.Add(room);
 
             // Assert 
             Assert.True(result.RoomId > 0);
             Assert.Equal("01", result.RoomName);
-            Assert.Equal(1, _context.Rooms.Count());
+            Assert.Equal(11, _context.Rooms.Count());
+        }
+
+        [Fact]
+        public void Room_FindExistingRooms()
+        {
+            // Action
+            var rooms = _iRoomRepository.GetRooms();
+
+            // Assert
+            Assert.True(rooms.Count() > 0);
         }
 
         [Theory]
-        [InlineData(1, true)]
-        [InlineData(0, false)]
-        public void Room_FindExistingRoom(int roomId, bool found)
+        [InlineData(-1)]
+        [InlineData(0)]
+        public async void Room_FindRoomIdLessThanOrEqualZero_ReturnNull(int roomId)
         {
-            IRoomRepository roomRepository = new RoomRepository(_uow, _iRoomRepository);
-            var room = roomRepository.GetRoom(roomId);
+            // Action
+            var room = await _iRoomRepository.GetRoom(roomId);
 
-            Assert.Equal(found, room != null);
+            // Assert
+            Assert.Null(room);
+        }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        [InlineData(4)]
+        public async void Room_FindRoomByIdFromOneToTen_ReturnNotNull(int roomId)
+        {
+            // Action
+            var room = await _iRoomRepository.GetRoom(roomId);
+
+            // Assert
+            Assert.NotNull(room);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace ClopyHotel.Infra.Data
         }
         public async Task<Room> GetRoom(int roomId)
         {
-            var room = await _roomRepository.FindAsync(roomId);
+            var room = await _roomRepository.Queryable().FirstOrDefaultAsync(x => x.RoomId == roomId);
             return room;
         }
         public IEnumerable<Room> GetRooms()
